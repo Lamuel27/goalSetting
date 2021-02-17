@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Goal</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.19.1/moment.min.js"></script>
+
+</head>
+<body>
+    
+
+<div class="roiAnalizerContainer">
+    <div id="container" style="height: 120px"></div>
+<form id="roiForm" class="roiForm"  action="">
+    <div class="rowContainer">
+        <div class="firstColumnOfRowContainer">
+            <p class="roiFormTitle">Switches per Month</p>
+            <!-- <p class="roiFormSubtitle">The estimated cost of the production and execution of your Campaign.</p> -->
+        </div>
+        <div class="secondColumnOfRowContainer">
+            <p class="roiAnalyticValue" id="avgSwitch">0</p>
+        </div>
+    </div>
+    <div class="rowContainer">
+        <div class="firstColumnOfRowContainer">
+            <p class="roiFormTitle">Switch Revenue Goal</p>
+            <!-- <p class="roiFormSubtitle">The total number of contacts you’ve sent your Campaign to.</p> -->
+        </div>
+        <div class="secondColumnOfRowContainer">
+            <input id="revGoal" name="revGoal" class="formInput" type="text" placeholder="Enter your switch revenue goal for the year" maxlength="10" />
+            <p class="rowUnit">$</p>
+        </div>
+    </div>
+
+    <div class="rowContainer">
+        <div class="firstColumnOfRowContainer">
+            <p class="roiFormTitle">Annual Value of Direct Deposit Customer</p>
+            <!-- <p class="roiFormSubtitle">The estimated cost of the production and execution of your Campaign.</p> -->
+        </div>
+        <div class="secondColumnOfRowContainer">
+            <input id="customerValue" name="customerValue" class="formInput" type="text" placeholder="Enter Annual Value of Customer" maxlength="10"/>
+            <p class="rowUnit">$</p>
+        </div>
+    </div>
+    <button id="ctaCalculate" class="roibutton">Calculate Goal</button>
+    </form>
+</div>
+<script src="assets/main.js"></script>
+
+</body>
